@@ -6,7 +6,7 @@ import map from "../Assets/icons/map.png";
 import friends from "../Assets/icons/friends.png";
 import settings from "../Assets/icons/settings.png";
 
-function NavBar() {
+export const NavBar = () => {
   return (
     <NavigationBar>
       <NavBtn>
@@ -24,9 +24,7 @@ function NavBar() {
       </NavBtn>
     </NavigationBar>
   );
-}
-
-export default NavBar;
+};
 
 export const NavigationBar = styled.div`
   bottom: 0;
