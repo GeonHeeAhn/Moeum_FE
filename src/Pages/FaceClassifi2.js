@@ -13,6 +13,11 @@ const FaceClassifi2 = () => {
     navigate("/faceclassification");
   };
 
+  const moveAdd = () => {
+    navigate("/home");
+  };
+
+
     return (
      <BackgroundContainer>
         <Content>
@@ -28,14 +33,12 @@ const FaceClassifi2 = () => {
                 <FaceBox />
             </PictureContainer>
             <BottomContainer>
-                <Btn>
+                <Btn onClick={moveAdd}>
                   네
                 </Btn>
-                <div onClick={moveFunc}>
-                <Btn>
+                <Btn onClick={moveFunc}>
                   아니오
                 </Btn>
-                </div>
             </BottomContainer>
         </Content>
       </BackgroundContainer>

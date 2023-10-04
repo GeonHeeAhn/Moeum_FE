@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 
 import BackgroundContainer from "../Components/BackgroundContainer";
 import { Content, Question, PictureContainer, Face, FaceBox, BottomContainer, Name, NextBtn } from "../Components/ClassifiContainer";
@@ -16,6 +17,11 @@ const FaceClassifi = () => {
         setBtnColor(false)
     }
 }, [text]);
+
+  const navigate = useNavigate();
+  const moveAdd = () => {
+    navigate("/home");
+  };
 
     return (
      <BackgroundContainer>
@@ -38,7 +44,7 @@ const FaceClassifi = () => {
                 </Name>
                 <NextBtn style={
               btnColor ? styles.filledBtn : styles.normalBtn
-            }>
+            } onClick={moveAdd}>
                     다음
                 </NextBtn>
             </BottomContainer>

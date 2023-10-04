@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import BackgroundContainer from "../Components/BackgroundContainer";
 import {Content, Question, Upper, Num, Down, PictureContainer, Pic, FaceBox, BtnContainer, YesBtn, NoBtn} from "../Components/NumofPeople";
 import dummy1 from "../Assets/dumy.png";
 
 const NumofPp = () => {
+    const navigate = useNavigate();
+    const moveFunc = () => {
+    navigate("/faceclassification2");
+  };
+
     return (
         <BackgroundContainer>
             <Content>
@@ -30,7 +36,7 @@ const NumofPp = () => {
                 <FaceBox style={{right: '80px', top: '180px'}}/>
             </PictureContainer>
             <BtnContainer>
-                <YesBtn>
+                <YesBtn onClick={moveFunc}>
                   네
                 </YesBtn>
                 <NoBtn>
