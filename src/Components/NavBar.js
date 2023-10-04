@@ -5,6 +5,8 @@ import home from "../Assets/icons/home.png";
 import map from "../Assets/icons/map.png";
 import friends from "../Assets/icons/friends.png";
 import settings from "../Assets/icons/settings.png";
+import plus from "../Assets/icons/plus.png";
+import check from "../Assets/icons/check.png";
 
 import { ModalBack, ModalBox, ModalBtn, ExitBtn } from "./PhotoModal";
 
@@ -33,7 +35,11 @@ export const NavBar = ({ setSelectedImage, selectedImage }) => {
   return (
     <>
       <>
-        <CenterBtn onClick={() => setModalOpen(true)} />
+        <CenterBtn onClick={() => setModalOpen(true)}>
+        <PlusBtn>
+          <img src={plus} alt="로고" />
+        </PlusBtn>
+        </CenterBtn>
         {modalOpen && (
           <ModalBack
             ref={modalBackground}
@@ -66,7 +72,8 @@ export const NavBar = ({ setSelectedImage, selectedImage }) => {
         <NavBtn>
           <img src={friends} alt="로고" />
         </NavBtn>
-        <NavBtn></NavBtn>
+        <NavBtn>
+        </NavBtn>
         <NavBtn>
           <img src={map} alt="로고" />
         </NavBtn>
@@ -87,8 +94,8 @@ export const NavigationBar = styled.div`
   align-items: center;
   box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.07);
   background: white;
-  !postition: fixed;
-  z-index: 998;
+  postition: fixed;
+  z-index: 1;
 `;
 export const NavBtn = styled.button`
   width: 30px;
@@ -100,20 +107,37 @@ export const NavBtn = styled.button`
   border: none;
   margin: 0px 0px 10px 0px;
   padding: 0px;
+  position: relative;
+  z-index: 1000;
 `;
 
 export const CenterBtn = styled.button`
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   margin: 0 auto;
   width: 56px;
   height: 56px;
   border: none;
   border-radius: 50%;
   background: #ffc329;
-  z-index: 999;
+  z-index: 2;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.07);
 `;
+
+export const PlusBtn = styled.button`
+width: 30px;
+height: 30px;
+background: transparent;
+display: flex;
+align-items: center;
+aligin-content: center;
+border: none;
+margin: 0px 0px 0px 0px;
+padding: 0px;
+position: relative;
+z-index: 1000;
+`;
+
 
 export const ModalBtnTop = styled(ModalBtn)`
   //왜인지 모르겠으나 적용이 안댐..

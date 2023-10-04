@@ -33,7 +33,7 @@ export const Home = () => {
         <TxtBox type="text" placeholder="이화여자대학교" />
         <SmallerTitle>Whom</SmallerTitle>
         <SmallerTitle>What</SmallerTitle>
-        <TextArea placeholder="내용을 입력해주세요" />
+        <TextArea type="text" placeholder="내용을 입력해주세요" />
       </MiniContainer>
       <NavBar />
     </BackgroundContainer>
@@ -53,5 +53,5 @@ export const MiniContainer = styled(Main)`
     display: none;
   }
   -ms-overflow-style: none;
-  padding: 0px;
+  padding-top: 15%;
 `;
