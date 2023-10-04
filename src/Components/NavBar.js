@@ -113,7 +113,7 @@ export const NavBtn = styled.button`
 
 export const CenterBtn = styled.button`
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   margin: 0 auto;
   width: 56px;
   height: 56px;

@@ -26,7 +26,7 @@ export const Home = () => {
         <Title>네컷 등록</Title>
       </TopBar>
       <MiniContainer>
-        <img src={dummy1} />
+        <img src={dummy1}  style={{ paddingTop: '150px' }} />
         <SmallerTitle>When</SmallerTitle>
         <TxtBox type="text" placeholder="ex) 2023. 05. 11" />
         <SmallerTitle>Where</SmallerTitle>
@@ -53,5 +53,6 @@ export const MiniContainer = styled(Main)`
     display: none;
   }
   -ms-overflow-style: none;
-  padding-top: 15%;
+  padding-top: 30px;
+
 `;
