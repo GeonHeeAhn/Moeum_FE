@@ -25,9 +25,7 @@ const FaceClassifi2 = () => {
                 <Face>
                     <img src={dummy2} style={{width: '90%'}}/>
                 </Face>
-                <FaceBox>
-                      
-                </FaceBox>
+                <FaceBox />
             </PictureContainer>
             <BottomContainer>
                 <Btn>
