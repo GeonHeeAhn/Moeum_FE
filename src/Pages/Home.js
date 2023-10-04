@@ -1,9 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import BackIcon from "../Assets/icons/goback.png";
-import dummy1 from "../Assets/dumy.png";
-
+//components
 import { NavBar, NavBtn, CenterBtn } from "../Components/NavBar";
 import BackgroundContainer from "../Components/BackgroundContainer";
 import Main from "../Components/Main";
@@ -13,6 +11,10 @@ import {
   TextArea,
 } from "../Components/postingComponents";
 import { TopBar, Title } from "../Components/TopBar";
+
+//assets
+import BackIcon from "../Assets/icons/goback.png";
+import dummy1 from "../Assets/dumy.png";
 
 export const Home = () => {
   return (

@@ -59,3 +59,5 @@ export const ExitBtn = styled.button`
   background: #ffffff;
   outline: none;
 `;
+
+export const PhotoInput = styled.input``;

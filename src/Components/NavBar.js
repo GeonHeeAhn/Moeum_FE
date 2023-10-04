@@ -8,9 +8,27 @@ import settings from "../Assets/icons/settings.png";
 
 import { ModalBack, ModalBox, ModalBtn, ExitBtn } from "./PhotoModal";
 
-export const NavBar = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+export const NavBar = ({ setSelectedImage, selectedImage }) => {
   const modalBackground = useRef();
+  const fileInput = useRef();
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const fileUpload = () => {
+    fileInput.current.click();
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const imgData = event.target.result;
+        setSelectedImage(event.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   return (
     <>
@@ -27,7 +45,15 @@ export const NavBar = () => {
           >
             <ModalBox>
               <ModalBtnTop>카메라</ModalBtnTop>
-              <ModalBtn>사진보관함</ModalBtn>
+              <ModalBtn onClick={fileUpload}>사진 보관함</ModalBtn>
+              <input
+                type="file"
+                ref={fileInput}
+                onChange={handleImageChange}
+                accept="image/*"
+                style={{ display: "none" }}
+              />
+              {selectedImage && <Link to="/facerecognition" />}
             </ModalBox>
             <ExitBtn onClick={() => setModalOpen(false)}>취소</ExitBtn>
           </ModalBack>
