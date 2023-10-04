@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import BackgroundContainer from "../Components/BackgroundContainer";
 import { Content, Question, PictureContainer, Face, FaceBox, BottomContainer, Btn } from "../Components/ClassifiContainer";
@@ -6,6 +7,12 @@ import { Content, Question, PictureContainer, Face, FaceBox, BottomContainer, Bt
 import dummy2 from "../Assets/dummy2.jpeg";
 
 const FaceClassifi2 = () => {
+  const navigate = useNavigate();
+
+  const moveFunc = () => {
+    navigate("/faceclassification");
+  };
+
     return (
      <BackgroundContainer>
         <Content>
@@ -26,9 +33,11 @@ const FaceClassifi2 = () => {
                 <Btn>
                   네
                 </Btn>
+                <div onClick={moveFunc}>
                 <Btn>
                   아니오
                 </Btn>
+                </div>
             </BottomContainer>
         </Content>
       </BackgroundContainer>
