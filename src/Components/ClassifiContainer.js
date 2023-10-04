@@ -85,7 +85,6 @@ text-align: center;
 width: 130px;
 height: 40px;
 
-
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 border-radius: 8px;
 border:none;
@@ -97,4 +96,28 @@ display: flex;
 text-align: center;
 color: #FFFFFF;
 `;
+
+export const Btn= styled.button`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+width: 130px;
+height: 40px;
+
+font-family: 'Pretendard';
+font-weight: 500;
+font-size: 15px;
+display: flex;
+text-align: center;
+color: #333333;
+
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+background: #FFFFFF;
+border-radius: 10px;
+border:none;
+`
+;
 
